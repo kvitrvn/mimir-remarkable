@@ -1,0 +1,11 @@
+[Unit]
+Description=Sync the reMarkable tablet when it is plugged in over USB
+Documentation=https://github.com/kvitrvn/mimir-remarkable
+
+[Service]
+ExecStart=%h/go/bin/mimir-remarkable watch
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
